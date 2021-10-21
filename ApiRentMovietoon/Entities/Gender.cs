@@ -2,7 +2,7 @@
 
 namespace ApiRentMovietoon.Entities
 {
-    public class Gener: IId
+    public class Gender: IId
     {
         public int Id {  get; set; }
         [Required]

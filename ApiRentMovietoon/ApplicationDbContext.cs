@@ -44,7 +44,7 @@ namespace ApiRentMovietoon
                 PasswordHash = passwordHasher.HashPassword(null, "Aa123456!")
             };
         }
-            public DbSet<Gener> Generos { get; set; }
+            public DbSet<Gender> Generos { get; set; }
         public DbSet<Movie> Movies { get; set; }
 
         public DbSet<Rent> Rents { get; set; }

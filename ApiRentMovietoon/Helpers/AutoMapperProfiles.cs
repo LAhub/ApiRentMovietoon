@@ -9,8 +9,8 @@ namespace ApiRentMovietoon.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Gener,GeneroDTO>().ReverseMap();
-            CreateMap<GenerCreateDTO, Gener >();
+            CreateMap<Gender,GenderDTO>().ReverseMap();
+            CreateMap<GenderCreateDTO, Gender >();
             CreateMap<IdentityUser, UserDTO>();
             CreateMap<Rent, RentDTO>().ReverseMap();
         }

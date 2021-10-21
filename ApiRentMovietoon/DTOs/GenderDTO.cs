@@ -1,6 +1,6 @@
 ﻿namespace ApiRentMovietoon.DTOs
 {
-    public class GeneroDTO
+    public class GenderDTO
     {
         public int Id {  get; set; }
         public string Name { get; set; }

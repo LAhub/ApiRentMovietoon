@@ -2,7 +2,7 @@
 
 namespace ApiRentMovietoon.Entities
 {
-    public class GenerCreateDTO
+    public class GenderCreateDTO
     {
         [Required]
         [StringLength(50)]

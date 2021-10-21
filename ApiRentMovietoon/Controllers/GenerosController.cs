@@ -17,30 +17,30 @@ namespace ApiRentMovietoon.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<GeneroDTO>>> Get()
+        public async Task<ActionResult<List<GenderDTO>>> Get()
         {
-            return await Get<Gener, GeneroDTO>();
+            return await Get<Gender, GenderDTO>();
         }
 
         [HttpGet("{id:int}", Name = "GetGener")]
-        public async Task<ActionResult<GeneroDTO>> Get(int id)
+        public async Task<ActionResult<GenderDTO>> Get(int id)
         {
-            return await Get<Gener,GeneroDTO>(id);
+            return await Get<Gender,GenderDTO>(id);
         }
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] GenerCreateDTO generCreateDTO)
+        public async Task<ActionResult> Post([FromBody] GenderCreateDTO generCreateDTO)
         {
-            return await Post<GenerCreateDTO,Gener, GeneroDTO>(generCreateDTO, "GetGener");
+            return await Post<GenderCreateDTO,Gender, GenderDTO>(generCreateDTO, "GetGener");
         }
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] GenerCreateDTO generCreateDTO)
+        public async Task<ActionResult> Put(int id, [FromBody] GenderCreateDTO generCreateDTO)
         {
-            return await Put<GenerCreateDTO, Gener>(id, generCreateDTO);
+            return await Put<GenderCreateDTO, Gender>(id, generCreateDTO);
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            return await Delete<Gener>(id);
+            return await Delete<Gender>(id);
         }
 
     }
