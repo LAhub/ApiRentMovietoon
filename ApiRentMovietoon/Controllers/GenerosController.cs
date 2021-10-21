@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApiRentMovietoon.Controllers
 {[ApiController]
-    [Route("api/gener")]
+    [Route("api/gender")]
     public class GenerosController : BaseController
     {
         public GenerosController(ApplicationDbContext context, IMapper mapper): base(context,mapper)
@@ -22,7 +22,7 @@ namespace ApiRentMovietoon.Controllers
             return await Get<Gender, GenderDTO>();
         }
 
-        [HttpGet("{id:int}", Name = "GetGener")]
+        [HttpGet("{id:int}", Name = "GetGender")]
         public async Task<ActionResult<GenderDTO>> Get(int id)
         {
             return await Get<Gender,GenderDTO>(id);
@@ -30,7 +30,7 @@ namespace ApiRentMovietoon.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] GenderCreateDTO generCreateDTO)
         {
-            return await Post<GenderCreateDTO,Gender, GenderDTO>(generCreateDTO, "GetGener");
+            return await Post<GenderCreateDTO,Gender, GenderDTO>(generCreateDTO, "GetGender");
         }
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] GenderCreateDTO generCreateDTO)
